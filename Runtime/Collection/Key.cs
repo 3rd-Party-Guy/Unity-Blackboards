@@ -8,7 +8,7 @@ namespace ThirdPartyGuy.Collections
         readonly string name;
         readonly int hash;
 
-        public Key(string name)
+        internal Key(string name)
         {
             this.name = name;
             hash = FNV1a.Compute(name);
