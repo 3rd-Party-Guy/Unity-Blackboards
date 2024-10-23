@@ -1,6 +1,6 @@
 using System;
 
-namespace Blackboard
+namespace ThirdPartyGuy.Collections
 {
     [System.Serializable]
     public readonly struct Key : IEquatable<Key>

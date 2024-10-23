@@ -1,6 +1,6 @@
 {
     "name": "com.3rd-party-guy.collections.blackboard.Editor",
-    "rootNamespace": "Blackboard.Editor",
+    "rootNamespace": "ThirdPartyGuy.Collections.Editor",
     "references": [
         "GUID:f3b7a49ca9be1ae40b2941dfdc12ebb4"
     ],

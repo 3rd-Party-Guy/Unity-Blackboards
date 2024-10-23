@@ -2,7 +2,7 @@ using System.Text;
 
 /// Reference: https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function
 
-namespace Blackboard
+namespace ThirdPartyGuy.Collections
 {
     public class FNV1a
     {

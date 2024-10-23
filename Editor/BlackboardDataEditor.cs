@@ -2,7 +2,7 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace Blackboard.Editor
+namespace ThirdPartyGuy.Collections.Editor
 {
     [CustomEditor(typeof(BlackboardData))]
     public class BlackboardDataEditor : UnityEditor.Editor

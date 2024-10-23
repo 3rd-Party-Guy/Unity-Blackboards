@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Blackboard
+namespace ThirdPartyGuy.Collections
 {
     [System.Serializable]
     public class BlackboardEntryData : ISerializationCallbackReceiver

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Blackboard
+namespace ThirdPartyGuy.Collections
 {
-    [CreateAssetMenu(fileName = "Blackboard Data", menuName = "3rd-Party-Guy/Collections/Blackboard/Data")]
+    [CreateAssetMenu(fileName = "ThirdPartyGuy.Collections Data", menuName = "3rd-Party-Guy/Collections/Blackboard/Data")]
     public class BlackboardData : ScriptableObject
     {
         public List<BlackboardEntryData> entries = new();

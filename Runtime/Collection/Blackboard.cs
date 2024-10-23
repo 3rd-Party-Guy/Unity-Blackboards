@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Blackboard
+namespace ThirdPartyGuy.Collections
 {
     [System.Serializable]
     public class Blackboard

@@ -1,6 +1,6 @@
 {
     "name": "com.3rd-party-guy.collections.blackboard",
-    "rootNamespace": "Blackboard",
+    "rootNamespace": "ThirdPartyGuy.Collections",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

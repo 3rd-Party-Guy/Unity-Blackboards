@@ -1,6 +1,6 @@
 using System;
 
-namespace Blackboard
+namespace ThirdPartyGuy.Collections
 {
     [System.Serializable]
     public class Entry<T>
