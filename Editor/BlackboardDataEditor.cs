@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
@@ -8,12 +9,29 @@ namespace ThirdPartyGuy.Collections.Editor
     public class BlackboardDataEditor : UnityEditor.Editor
     {
         ReorderableList entryList;
+        ReorderableList templateList;
 
         private void OnEnable()
         {
+            templateList = new(serializedObject, serializedObject.FindProperty("subTemplates"), true, true, true, true)
+            {
+                drawHeaderCallback = (rect) =>
+                {
+                    EditorGUI.LabelField(new(rect.x, rect.y, rect.width, EditorGUIUtility.singleLineHeight), "Sub-Templates");
+                },
+                drawElementCallback = (rect, index, isActive, isFocused) =>
+                {
+                    var element = templateList.serializedProperty.GetArrayElementAtIndex(index);
+                    rect.y += 2;
+
+                    var valueRect = new Rect(rect.x, rect.y, rect.width, EditorGUIUtility.singleLineHeight);
+                    EditorGUI.PropertyField(valueRect, element);
+                }
+            };
+
             entryList = new(serializedObject, serializedObject.FindProperty("entries"), true, true, true, true)
             {
-                drawHeaderCallback = rect =>
+                drawHeaderCallback = (rect) =>
                 {
                     var infoSectionWidth = rect.width * .3f;
 
@@ -69,7 +87,11 @@ namespace ThirdPartyGuy.Collections.Editor
         public override void OnInspectorGUI()
         {
             serializedObject.Update();
+
             entryList.DoLayoutList();
+            EditorGUILayout.Space();
+            templateList.DoLayoutList();
+
             serializedObject.ApplyModifiedProperties();
         }
     }
