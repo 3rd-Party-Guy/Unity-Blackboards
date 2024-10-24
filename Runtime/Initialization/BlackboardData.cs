@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ThirdPartyGuy.Collections
 {
-    [CreateAssetMenu(fileName = "ThirdPartyGuy.Collections Data", menuName = "3rd-Party-Guy/Collections/Blackboard/Data")]
+    [CreateAssetMenu(fileName = "BlackboardData", menuName = "3rd-Party-Guy/Collections/Blackboard/Data")]
     public class BlackboardData : ScriptableObject
     {
         [SerializeField] List<BlackboardData> subTemplates = new();
