@@ -26,6 +26,16 @@ namespace ThirdPartyGuy.Collections
             Actions.Clear();
         }
 
+        public T Get<T>(Key key)
+        {
+            if (entries.TryGetValue(key, out var value))
+            {
+                return (T)value;
+            }
+
+            return default;
+        }
+
         public bool TryGet<T>(Key key, out T value)
         {
             if (entries.TryGetValue(key, out var entry) && entry is Entry<T> castEntry)
