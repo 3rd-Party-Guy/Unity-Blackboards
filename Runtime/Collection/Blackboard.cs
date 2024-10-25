@@ -30,7 +30,8 @@ namespace ThirdPartyGuy.Collections
         {
             if (entries.TryGetValue(key, out var value))
             {
-                return (T)value;
+                var castedValue = (Entry<T>)value;
+                return castedValue.Value;
             }
 
             return default;
