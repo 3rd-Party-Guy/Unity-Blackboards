@@ -79,5 +79,11 @@ namespace ThirdPartyGuy.Collections
         {
             entries.Remove(key); 
         }
+
+        public void Clear()
+        {
+            keys.Clear();
+            entries.Clear();
+        }
     }
 }
